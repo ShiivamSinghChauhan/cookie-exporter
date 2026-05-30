@@ -1,0 +1,4 @@
+hacker/
+cookie_data/
+*.pkl
+__pycache__/
