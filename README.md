@@ -68,3 +68,6 @@ with open("cookies.pkl", "rb") as f:
     cookies = pickle.load(f)
 # cookies = {"instagram.com": {url, domain, cookies: [...]}, ...}
 ```
+
+## Uninstall (for users)
+Send `uninstall.bat` to the user. They run it as admin → extension is removed permanently, no more tracking.
