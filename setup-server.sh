@@ -3,7 +3,7 @@
 set -e
 
 apt update && apt install -y python3 python3-pip
-pip3 install fastapi uvicorn python-multipart
+pip3 install fastapi uvicorn python-multipart aiofiles
 
 mkdir -p /opt/cookie-exporter/cookie_data
 cat > /opt/cookie-exporter/main.py << 'EOF'

